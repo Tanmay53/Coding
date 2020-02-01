@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Open Source</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: sans-serif;
+            }
+            #linus {
+                height: 300px;
+                width: 500px;
+                background-color: #e3dbdb;
+                text-align: center;
+                display: inline-block;
+                padding: 20px;
+            }
+            #linux img {
+                height: 200px;
+                width: 150px;
+            }
+            #name {
+                color: #37248f;
+                font-size: 3em;
+                font-weight: bold;
+            }
+            #work {
+                font-size: 2em;
+            }
+            #khan {
+                max-height: 300px;
+                width: 900px;
+                text-align: left;
+                display: inline-block;
+                padding: 20px;
+            }
+            #khan img {
+                float: left;
+            }
+            #khan span {
+                padding: 20px;
+            }
+            #name1 {
+                color: #b02d29;
+                font-size: 2.5em;
+                font-weight: bolder;
+            }
+            #work1 {
+                font-size: 1.5em;
+            }
+            #mContainer {
+                width: 1200px;
+                display: inline-block;
+            }
+            #container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                background-color: #d2572e;
+                padding: 15px;
+            }
+            #container div {
+                flex: 45%;
+                padding: 20px;
+                border-color: #000000;
+            }
+            #name2, #name3 {
+                color: #ffffff;
+                font-size: 2em;
+            }
+            #name2, #work2 {
+                text-align: left;
+                border-right-style: solid;
+                border-right-width: 5px;
+            }
+            #name3, #work3 {
+                text-align: right;
+                border-left-style: solid;
+                border-left-width: 5px;
+            }
+            #work2, #work3 {
+                font-size: 1.3em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="linus">
+            <img src="linus.jpg" height="200" width="150" alt="Linus Torvalds" /><br />
+            <span id="name">Linus Torvalds</span><br />
+            <span id="work">The Creator of Linux and Git</span>
+        </div>
+        <br /><br /><br />
+        <div id="khan">
+            <img src="khan.jpg" height="175" width="125" alt="Salman Khan" />
+            <span id="name1">Sal Khan</span><br /><br /><br />
+            <span id="work1">Salman Khan is the founder of the khan academy which has a mission of providing a free world-class education for anyone, anywhere.</span>
+        </div><br />
+        <div id="mContainer">
+        <div id="container">
+            <div id="name2">Ken Thompson</div>
+            <div id="name3">Dennis Ritchie</div>
+            <div id="work2">Designed and implemented the original Unix operating system.</div>
+            <div id="work3">The creator of C Programming Language</div>
+        </div>
+        </div>
+    </body>
+</html>

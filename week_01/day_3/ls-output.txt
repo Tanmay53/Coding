@@ -1,0 +1,19 @@
+total 128
+-rw-r--r-- 1 tanmay tanmay 119946 Dec 25 19:08 w1_d3.zip
+-rw-r--r-- 1 tanmay tanmay      0 Dec 29 16:39 ls-output.txt
+drwxr-xr-x 3 tanmay tanmay   4096 Dec 25 20:06 Day_3_Assignment
+.:
+total 132
+drwxr-xr-x 3 tanmay tanmay   4096 Dec 25 20:06 Day_3_Assignment
+-rw-r--r-- 1 tanmay tanmay    192 Dec 29 16:39 ls-output.txt
+-rw-r--r-- 1 tanmay tanmay 119946 Dec 25 19:08 w1_d3.zip
+
+./Day_3_Assignment:
+total 12
+drwxr-xr-x 2 tanmay tanmay 4096 Jun 12  2019 images
+-rw-r--r-- 1 tanmay tanmay 5809 Dec 29  2019 index.html
+
+./Day_3_Assignment/images:
+total 124
+-rw-r--r-- 1 tanmay tanmay 100788 Jun 12  2019 pug.jpg
+-rw-r--r-- 1 tanmay tanmay  21119 Jun 12  2019 sample_table.PNG

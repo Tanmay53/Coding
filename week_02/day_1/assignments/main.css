@@ -1,0 +1,134 @@
+* {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+* a {
+    text-decoration: none;
+    color: #2a3f7e;
+}
+* a:hover {
+    text-decoration: underline;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+aside {
+    width: 150px;
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    background-image: linear-gradient(to bottom, #ffffff 1%, #f6f6f6 20%);
+    border-right-style: solid;
+    border-right-color: #bdcedb;
+    border-right-width: 1px;
+}
+aside a {
+    line-height: 18px;
+}
+#wikiImage {
+    height: 130px;
+    width: 120px;
+    float: left;
+    clear: both;
+    padding-bottom: 21px;
+}
+.navTop {
+    padding-top: 11px;
+    box-shadow: 0px 12px 1px -11px #aaaaaa;
+}
+.navTop + a {
+    padding-top: 6px;
+}
+section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#favicon {
+    height: 12px;
+    width: 1rem;
+}
+section > a {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 36px;
+    margin-top: 15px;
+}
+nav span {
+    border-bottom: 1px solid #bdcedb;
+    border-right: 1px solid #bdcedb;
+    line-height: 31px;
+    padding: 5px;
+    font-size: 13px;
+}
+.selected {
+    border-bottom: 0px;
+}
+.selected a {
+    color: #000000;
+}
+.deselected {
+    background-image: linear-gradient(to bottom, rgba(167,215,249,0) 0, #e6f4fb 100%);
+}
+.navBack {
+    background-image: linear-gradient(to bottom, #ffffff, #f7f7f7);
+}
+.middleSpace {
+    flex-grow: 1;
+}
+article {
+    padding: 24px;
+    font-size: 14px;
+}
+.articleTitle {
+    font-size: 28.8px;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    border-bottom: 1px solid #000000;
+}
+.titleFooter {
+    font-size: 13px;
+    padding: 4px;
+}
+#introBox {
+    width: 22em;
+    float: right;
+    text-align: left;
+    border: 1px solid grey;
+    background-color: #f8f9fa;
+    padding: 0.2em;
+    margin: 0.5em 0em 0.5em 1em;
+    font-size: 12px;
+}
+#introBox [colspan = '2'] {
+    text-align: center;
+}
+#introBox th[colspan = '2'] {
+    font-size: 125%;
+}
+#articleIndex {
+    display: table;
+    background-color: #f8f9fb;
+    border: 1px solid #a4a8ab;
+    text-align: center;
+    padding: 7px;
+    line-height: 22px;
+}
+#articleIndex ol {
+    list-style-type: none;
+    text-align: left;
+}
+#articleIndex > ol {
+    padding: 0px;
+}

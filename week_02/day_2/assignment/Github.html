@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Github</title>
+        <style>
+        * {
+            font-family: sans-serif;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            background-color: #24282e;
+            color: #fff;
+            padding: 8px;
+            line-height:24px;
+        }
+        .navContent {
+            font-size: 16px;
+            margin-left:11px;
+        }
+        .navSpacing {
+            flex-grow: 0.26;
+        }
+        .chevDown {
+            font-size: 21px;
+        }
+        .wBorder {
+            border: #fff solid 2px;
+            border-radius: 3px;
+            padding: 4px;
+        }
+        nav > label {
+            background-color: rgba(255, 255, 255, 0.125);
+        }
+        .searchBox {
+            background-color: rgba(0, 0, 0, 0);
+            border-color: rgba(0, 0, 0, 0);
+            font-size: 16px;
+        }
+        .searchBox + span > img{
+            /*line-height: 100%;*/
+            padding-top: 6px;
+            padding-right: 7px;
+        }
+        #art1 {
+            padding: 5% 15% 5% 15%;
+            background: #2b3137;
+        }
+        #intro {
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            box-sizing:border-box;
+        }
+        #intro > :first-child {
+            color:#fff;
+            align-content: center;
+            width: 50%;
+            margin-right: 31px;
+        }
+        .XLargeSize {
+            font-size: 64px;
+        }
+        .MLargeSize {
+            font-size: 48px;
+        }
+        .largeSize {
+            font-size: 32px;
+        }
+        .mediumSize {
+            font-size: 20px;
+        }
+        .colGrey {
+            color: #666666;
+        }
+        .colWhite {
+            color: #ffffff;
+        }
+        #intro > :nth-child(2) {
+            background-color: #fff;
+            border: #fff solid 2px;
+            border-radius: 2px;
+            width: 37%;
+            padding: 13px;
+        }
+        .fLable {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .fLable + input {
+            width: 100%;
+            height: 31px;
+            border: #ccc solid 1px;
+            border-radius: 5px;
+            margin-bottom: 12px;
+        }
+        .pwdDiscription {
+            font-size: 12px;
+            color:#28a745;
+            margin-top: -8px;
+        }
+        #signUp {
+            width: 100%;
+            height: 76px;
+            margin: 41px 0px 45px 0px;
+            font-size: 16px;
+            font-weight: bolder;
+            color: #fff;
+            background-color: #2ebc4f;
+            border: #2ebc4f solid 2px;
+            border-radius: 5px;
+        }
+        #tAndC {
+            font-size: 12px;
+            color: #555555;
+        }
+        #starter {
+            width: 100%;
+            padding: 51px;
+        }
+        #gitCartoon {
+            position: relative;
+            height: 25%;
+            width: 25%;
+            transform: translate(240%, -44%);
+        }
+        #starterBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: #fff solid 1px;
+            border-radius: 10px;
+            box-shadow:0px 1px 15px #999999;
+            width: 90%;
+            margin: -6.3% 3% 3% 2%;
+            padding: 31px;
+        }
+        #starterBox > div {
+            text-align: center;
+        }
+        #starterBox > div > div {
+            padding-bottom: 11px;
+        }
+        #starterBox > :first-child {
+            text-align:left;
+            flex-basis:450px;
+        }
+        #starterBox > :nth-child(3) {
+            margin-right:51px;
+        }
+        .starterSpacing {
+            flex-grow: 0.7;
+        }
+        .sbTitle {
+            font-weight: bolder;
+        }
+        #starterBox button {
+            padding: 21px;
+            border: #1074e7 solid 1px;
+            border-radius: 5px;
+            margin: 26px 0px;
+        }
+        #explore {
+            width: 100%;
+            color: #fff;
+        }
+        #explore > div {
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            width: 82%;
+            margin: 0% 7%;
+            background: #1B1F23 url(https://github.githubassets.com/images/modules/site/universe19.png) bottom right no-repeat;
+            background-size: contain;
+            padding: 41px;
+            border: rgba(0, 0, 0, 0) solid 1px;
+            border-radius: 5px;
+        }
+        #exploreText {
+            flex-basis: 50%;
+        }
+        #exploreSpacing {
+            flex-grow: 1;
+        }
+        #exploreText > :nth-child(2) {
+            font-size: 14px;
+            font-family:monospace;
+            color: #888888;
+            margin-top: 11px;
+        }
+        #explore button {
+            background-color: #1074e7;
+            border: #1074e7 solid 1px;
+            border-radius: 5px;
+            color: #fff;
+            font-family: monospace;
+            font-size: 14px;
+            padding: 11px 21px 21px 21px;
+            font-weight: bold;
+            margin-right: 150px;
+        }
+        #topUsers {
+            width: 80%;
+            padding: 0% 10%;
+        }
+        #topUsers > div {
+            width: 100%;
+            margin: 71px 0px;
+        }
+        #topUsers > div > :first-child {
+            text-align: center;
+            font-size: 20px;
+            color: #555555;
+            padding-bottom: 21px;
+        }
+        #userContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            flex-wrap:wrap;
+            filter:grayscale(100%);
+        }
+        #userContainer > div {
+            flex-basis: 14%;
+            text-align:center;
+            margin: 16px;
+            height: 31px;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+        #features {
+            margin-top: 100px;
+            text-align:center;
+        }
+        #features > button {
+            background-color: #fff;
+            border:#1074e7 solid 1px;
+            border-radius: 4px;
+            color:#1074e7;
+            padding: 26px;
+            margin: 21px 0px;
+            font-size: 16px;
+        }
+        #featureContent {
+            display:flex;
+            flex-direction: row;
+            width: 90%;
+            margin: 7% 5%;
+        }
+        #featureContent > img {
+            flex-basis: 141%;
+        }
+        #featureData {
+            text-align:left;
+            flex-basis: 110%;
+            padding: 0px 80px 0px 170px;
+        }
+        #featureData > div {
+            margin: 100px 0px;
+        }
+        #featureData > div > :first-child {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        #fetureData > div > :nth-child(2) {
+            font-size: 14px;
+        }
+        #featureCompanies {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 21px 0px;
+            text-align:left;
+
+        }
+        #featureCompanies > div {
+            flex-basis: 17%;
+            border: #fff solid 1px;
+            border-radius: 5px;
+            padding:16px;
+            box-shadow: 0px 0px 15px #999999; 
+            margin: 0px 7px;
+        }
+        #featureCompanies > div > :first-child {
+            height: 200px;
+            background-size:contain;
+            margin-bottom: 14px;
+        }
+        #featureCompanies > div > :nth-child(2) {
+            margin-bottom: 6px;
+        }
+        #featureCompanies > div > :nth-child(3) {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom:21px;
+        }
+        #featureCompanies a {
+            text-decoration: none;
+            display: block;
+            width:100%;
+            padding: 16px 11px 21px 0px;
+        }
+        #featureCompanies a > span {
+            float: right;
+        }
+        #featureCompanies hr {
+            width: 90%;
+            height: 1px;
+            background-color: rgba(175, 175, 175, 0.3);
+            align-self: center;
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            <div class="navContent">Why Github? <span class="chevDown">&#8964</span></div>
+            <div class="navContent">Enterprise</div>
+            <div class="navContent">Explore <span class="chevDown">&#8964</span></div>
+            <div class="navContent">Markerplace</div>
+            <div class="navContent">Pricing <span class="chevDown">&#8964</span></div>
+            <div class="navSpacing"></div>
+            <label class="navContent"><input class="searchBox" type="search" id="searchBox" placeholder="Search GitHub" /><span><img src="https://github.githubassets.com/images/search-key-slash.svg"></span></label>
+            <div class="navContent">Sign In</div>
+            <div class="navContent wBorder">Sign Up</div>
+        </nav>
+        <article id="art1">
+            <div id="intro">
+                <div>
+                    <div class="XLargeSize">Built for Developers</div>
+                    <div class="mediumSize" style="color: rgba(255, 255, 255, 0.6);">Github is a development platform inspired by the way you work. From <a>open source</a> to <a>business</a>, you can host a review code, manage projects, and build software alongside 40 million developers.</div>
+                </div>
+                <div>
+                    <div class="fLable">Username</div>
+                    <input type="text" />
+                    <div class="fLable">Email</div>
+                    <input type="email" />
+                    <div class="fLable">Password</div>
+                    <input type="password" />
+                    <div class="pwdDiscription">Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter. <a>Learn More</a></div>
+                    <button id="signUp">Sign up for GitHub</button>
+                    <div id="tAndC">By Clicking "Sign up for GitHub", you agree to our <a>Terms of Service</a> and <a>Privacy Policy</a>. We'll occasionally send you account related emails.</div>
+                </div>
+            </div>
+        </article>
+        <article id="starter">
+            <img src="GitCartoon.svg" id="gitCartoon" />
+            <div id="starterBox">
+                <div>
+                    <div class="largeSize" style="font-weight: bold; margin-bottom: 20px;">Get Started with GitHub Enterprise</div>
+                    <div class="mediumSize colGrey">Take Collaboration to the next level with security and administrative features built for teams.</div>
+                </div>
+                <div class="starterSpacing"></div>
+                <div>
+                    <div><img src="Enterprise.svg" /></div>
+                    <div class="sbTitle">Enterprise</div>
+                    <div class="sbText colGrey">Deploy to your environment or the cloud.</div>
+                    <button style="background-color: #1074e7; color: #fff;">Start a free Trial</button>
+                </div>
+                <div>
+                    <div><img src="TAlkToUs.svg" /></div>
+                    <div class="sbTitle">Talk to us</div>
+                    <div class="sbText colGrey">Need Help?</div>
+                    <button style="background-color: #fff; color: #1074e7;">Contact Sales&#8594;</button>
+                </div>
+            </div>
+        </article>
+        <article id="explore">
+            <div>
+                <div id="exploreText">
+                    <div class="largeSize">See what launched at Universe</div>
+                    <div>Say hello to our new GiuHub for mobile experience, get more from GitHub Actions and Packages, and learn how we're shaping the future of software, together.</div>
+                </div>
+                <div id="exploreSpacing"></div>
+                <div>
+                    <button>Explore the launches <span style="font-size: 250%;">&#8594;</span></button>
+                </div>
+            </div>
+        </article>
+        <article id="topUsers">
+            <div>
+                <div style="text-align: center;">More than 2.1 million businesses and organizations use GitHub.</div>
+                <div id="userContainer">
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/airbnb-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/sap-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/ibm-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/google-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/paypal-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/bloomberg-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/spotify-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/swift-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/facebook-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/node-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/nasa-logo.png);"></div>
+                    <div style="background-image: url(https://github.githubassets.com/images/modules/site/logos/walmart-logo.png);"></div>
+                </div>
+            </div>
+        </article>
+        <article id="features">
+            <div class="colGrey">GitHub for Teams</div>
+            <div class="MLargeSize" style="margin-top: 31px;">A better way to work together</div>
+            <div class="colGrey mediumSize" style="margin: 11px 28%; width:44%;">GitHub brings teams together to work through problems, move ideas forward, and learn from each other along the way.</div>
+            <button>Sign up your team &#8594;</button>
+            <div id="featureContent">
+                <img src="https://github.githubassets.com/images/modules/site/home-illo-team.svg">
+                <div id="featureData">
+                    <div>
+                        <div>Write Better Code</div>
+                        <div>Collaboration makes perfect. The conversations and code review that happens in pull requests help your team share the weight of your work and improve the software you build. <a href="#">Learn about code review.</a></div>
+                    </div>
+                    <div>
+                        <div>Manage your chaos</div>
+                        <div>Take a deep breath. On GitHub, project management happens in issues and project boards, right alongside your code. All you have to do is mention a teammate to get them involved. <a href="#">Learn about project management.</a></div>
+                    </div>
+                    <div>
+                        <div>Find the right tools</div>
+                        <div>Browse and buy apps from GitHub Marketplace from your GitHub account. Find the tools you like to discover new favourites--then start using them in minutes. <a href="#">Learn about integrations.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colGrey mediumSize">See how the world's leading companies use GitHub Enterprise.</div>
+            <div id="featureCompanies">
+                <div>
+                    <div style="background-image:url(https://customer-stories-feed.github.com/customer_stories/mgm-resorts/hero.jpg);"></div>
+                    <div>MGM Resorts International</div>
+                    <div>Hospitality</div>
+                    <hr />
+                    <div><a href="#">Read More <span>&#8594;</span></a></div>
+                </div>
+                <div>
+                    <div style="background-image:url(https://customer-stories-feed.github.com/customer_stories/nationwide/nw_hero.jpg);"></div>
+                    <div>Nationwide</div>
+                    <div>Insurance</div>
+                    <hr />
+                    <div><a href="#">Read More <span>&#8594;</span></a></div>
+                </div>
+                <div>
+                    <div style="background-image:url(https://customer-stories-feed.github.com/customer_stories/sap/sap6.jpg);"></div>
+                    <div>SAP</div>
+                    <div>Business Software</div>
+                    <hr />
+                    <div><a href="#">Read More <span>&#8594;</span></a></div>
+                </div>
+                <div>
+                    <div style="background-image:url(https://customer-stories-feed.github.com/customer_stories/spotify/spotifyhero.jpg);"></div>
+                    <div>Spotify</div>
+                    <div>Technology / Streaming</div>
+                    <hr />
+                    <div><a href="#">Read More <span>&#8594;</span></a></div>
+                </div>
+            </div>
+        </article>
+    </body>
+</html>

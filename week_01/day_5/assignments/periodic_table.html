@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Periodic Table</title>
+        <style>
+            header {
+                text-align: center;
+                font-size: 2em;
+            }
+            #main {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                width: 100%;
+            }
+            .group div {
+                height: 50px;
+                width: 50px;
+                border-style: solid;
+                border-width: 1px;
+                margin: 5px;
+            }
+            #hydro {
+                color: #ffffff;
+                font-size: 2.5em;
+                text-align: center;
+                font-family: sans-serif;
+            }
+            #metal div {
+                background-color: #899f2b;
+            }
+            #Emetal div{
+                background-color: #f85354;
+                text-align: center;
+                font-size: 1.3em;
+                font-family: sans-serif;
+            }
+            .Dblock1 {
+                background-color: #3979fa;
+            }
+            #Fblock1, #Fblock2 {
+                background-color: #ffe6d4;
+                height: 42px;
+                width: 42px;
+                border-width: 5px;
+            }
+            .Dblock div {
+                background-color: #3979fa;
+            }
+            .metalloid {
+                background-color: #ac4986;
+            }
+            .Ometal {
+                background-color: #fa6838;
+            }
+            .Uelement {
+                background-color: #635d5f;
+            }
+            .nonMetal {
+                background-color: #5aa02c;
+            }
+            .halogen div {
+                background-color: #f64965;
+            }
+            .nobleGas div {
+                background-color: #fecd3d;
+            }
+            #lanthanoid, #actinoid {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+            #lanthanoid div, #actinoid div{
+                height: 50px;
+                width: 50px;
+                border-style: solid;
+                border-width: 1px;
+            }
+            #lanthanoid div {
+                background-color: #47592e;
+            }
+            #actinoid div {
+                background-color: #95bd5e;
+            }
+            #exampleI{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 530px;
+                height: 130px;
+                width: 130px;
+                background-color: #899f2b;
+                border-style: solid;
+                border-width: 2px;
+                font-family: sans-serif;
+                padding: 10px;
+            }
+            #aNum {
+                align-self: flex-end;
+                font-size: 1.2em;
+            }
+            #eSymbol {
+                font-size: 4em;
+            }
+            #eName {
+                font-size: 1.7em;
+            }
+        </style>
+    </head>
+    <body>
+        <header>THE PERIODIC TABLE OF ELEMENTS</header>
+        <div id="exampleI">
+            <div id="aNum">14</div>
+            <div id="eSymbol">Si</div>
+            <div id="eName">Silicon</div>
+        </div>
+        <div id="main">
+            <div id="metal" class="group">
+                <div id="hydro" style="background-color: #ab2823;">H</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="Emetal" class="group">
+                <div>4</div>
+                <div>12</div>
+                <div>20</div>
+                <div>38</div>
+                <div>56</div>
+                <div>88</div>
+            </div>
+            <div class="group">
+                <div class="Dblock1"></div>
+                <div class="Dblock1"></div>
+                <div id="Fblock1"></div>
+                <div id="Fblock2"></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Dblock group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="group">
+                <div class="metalloid"></div>
+                <div class="Ometal"></div>
+                <div class="Ometal"></div>
+                <div class="Ometal"></div>
+                <div class="Ometal"></div>
+                <div class="Uelement"></div>
+            </div>
+            <div class="group">
+                <div class="nonMetal"></div>
+                <div class="metalloid"></div>
+                <div class="metalloid"></div>
+                <div class="Ometal"></div>
+                <div class="Ometal"></div>
+                <div class="Uelement"></div>
+            </div>
+            <div class="group">
+                <div class="nonMetal"></div>
+                <div class="nonMetal"></div>
+                <div class="metalloid"></div>
+                <div class="metalloid"></div>
+                <div class="Ometal"></div>
+                <div class="Uelement"></div>
+            </div>
+            <div class="group">
+                <div class="nonMetal"></div>
+                <div class="nonMetal"></div>
+                <div class="nonMetal"></div>
+                <div class="metalloid"></div>
+                <div class="metalloid"></div>
+                <div class="Uelement"></div>
+            </div>
+            <div class="halogen group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: #635d5f;"></div>
+            </div>
+            <div class="nobleGas group">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: #635d5f;"></div>
+            </div>
+        </div>
+        <br />
+        <div id="Fblockm">
+            <div id="lanthanoid">
+                <div>La</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="actinoid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>Am</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>No</div>
+            </div>
+        </div>
+    </body>
+</html
