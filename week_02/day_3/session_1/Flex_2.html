@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Flex 2</title>
+        <style>
+            #box {
+                display:flex;
+                width:400px;
+                height: 300px;
+                justify-content:space-evenly;
+                flex-wrap:wrap;
+            }
+            #box > div {
+                flex-basis: 23%;
+                background-color: #009688;
+                border-radius: 5px;
+                margin: 1%;
+            }
+            #box > .long {
+                flex-basis: 48%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div></div>
+            <div class="long"></div>
+            <div></div>
+            <div class="long"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="long"></div>
+        </div>
+    </body>
+</html>
