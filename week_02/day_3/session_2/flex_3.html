@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-81" />
+        <title>Flex 3</title>
+        <style>
+            #box {
+                display: flex;
+                flex-direction:column;
+                flex-wrap: wrap;
+                justify-content:space-evenly;
+                width: 500px;
+                height: 500px;
+            }
+            #box > div {
+                display: flex;
+                flex-direction:row;
+                justify-content:flex-start;
+                flex-basis: 25%;
+            }
+            #box > div > div {
+                flex-basis: 23%;
+                margin: 3%;
+                background-color: #009688;
+                border-radius: 5px;
+            }
+            @media screen and (max-width: 600px) {
+                #box > div{
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+                #box {
+                    flex-direction: row;
+                    width: 95%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>

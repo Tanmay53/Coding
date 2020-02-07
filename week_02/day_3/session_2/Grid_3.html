@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid 3</title>
+        <style>
+            #box {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap:6px;
+                width: 400px;
+                height: 400px;
+            }
+            #box > div {
+                background-color: #009688;
+                border-radius: 5px;
+            }
+            #box > :nth-child(10) {
+                grid-row: 4 / 5;
+            }
+            #box > :nth-child(-n+9) {
+                grid-row: 3 / 4;
+            }
+            #box > :nth-child(-n+7) {
+                grid-row: 2 / 3;
+            }
+            #box > :nth-child(-n+4) {
+                grid-row: 1 / 2;
+            }
+            @media only screen and (orientation: portrait) {
+                #box {
+                    width: 98%;
+                    height: 800px;
+                    grid-gap: 21px;
+                }
+                #box > div {
+                    border-radius: 21px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

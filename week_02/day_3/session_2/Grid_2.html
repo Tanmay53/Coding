@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid 2</title>
+        <style>
+            #head {
+                grid-area: header;
+                background-color: #f73f37;
+            }
+            #aside {
+                grid-area: aside;
+                background-color:#64d41d;
+            }
+            #main {
+                grid-area: main;
+                background-color: #277866;
+            }
+            #container {
+                display: grid;
+                grid-template-rows: 10% auto;
+                grid-template-areas: 'header header header header header header header' 'aside aside main main main main main';
+                grid-gap: 6px;
+                width: 600px;
+                height: 600px;
+            }
+            #container > div {
+                border-radius: 5px;
+            }
+            @media only screen and (orientation: portrait) {
+                #container {
+                    grid-template-areas: 'aside header header header header' 'main main main main main';
+                    width: 98%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="head"></div>
+            <div id="aside"></div>
+            <div id="main"></div>
+        </div>
+    </body>
+</html>

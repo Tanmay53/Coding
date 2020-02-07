@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Open Source</title>
+        <style>
+            * > div {
+                display:flex    ;
+                justify-content:center;
+                font-family:sans-serif;
+            }
+            #linus > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+                padding: 21px;
+                background-color: #e3dbdb;
+                text-align: center;
+            }
+            #linus > div > :nth-child(2) {
+                font-size: 46px;
+                color: #1c387b;
+                font-weight: bold;
+            }
+            #linus > div > :nth-child(3) {
+                font-size: 36px;
+            }
+            img {
+                width: 151px;
+            }
+            #sal > div {
+                display: flex;
+                flex-direction:row;
+                width: 80%;
+                margin: 51px;
+            }
+            #salInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:flex-start;
+                padding: 21px;
+            }
+            #salInfo > :nth-child(1){
+                font-size: 31px;
+                font-weight: bold;
+                color: #d0332d;
+                margin-bottom: 31px;
+            }
+            #salInfo > :nth-child(2) {
+                font-size: 21px;
+            }
+            #creator > div {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                justify-content:stretch;
+                width: 85%;
+                background-color: #d2572e;
+                padding: 31px;
+            }
+            #creator > div > :nth-child(2n-1) {
+                justify-self:stretch;
+                justify-content: flex-start;
+                border-right: #000 solid 5px;
+                padding-right: 30%;
+            }
+            #creator > div > :nth-child(2n) {
+                justify-self: stretch;
+                justify-content: flex-end;
+                border-left: #000 solid 5px;
+                padding-left: 30%;
+                text-align: right;
+            }
+            .header {
+                color: #fff;
+                font-size: 36px;
+                padding-bottom: 21px;
+            }
+            .content {
+                font-size: 21px;
+            }
+            @media only screen and (orientation:portrait) {
+                #linus > div {
+                    width: 100%;
+                }
+                #sal > div {
+                    width: 100%;
+                }
+                #creator > div {
+                    width: 100%;
+                    grid-template-columns: auto;
+                    justify-content: center;
+                }
+                #creator > div > :nth-child(2) {
+                    grid-row: 3 / 4;
+                }
+                #creator > div > :nth-child(n) {
+                    border: none;
+                    justify-content: inherit;
+                    justify-self: inherit;
+                    padding: 0px 0px 21px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="linus">
+            <div>
+                <img src="linus.jpg" />
+                <div> Linus Torvalds </div>
+                <div>The cteator of Linux and Git</div>
+            </div>
+        </div>
+        <div id="sal">
+            <div>
+                <img src="khan.jpg" />
+                <div id="salInfo">
+                    <div>Sal Khan</div>
+                    <div>Salman Khan is the founder of the Khan Academy which has a mission of providing a world-class education for everyone, anywhere.</div>
+                </div>
+            </div>
+        </div>
+        <div id="creator">
+            <div>
+                <div class="header">Ken Thompson</div>
+                <div class="header">Denis Richie</div>
+                <div class="content">Designed and implemented the original Unix operating system</div>
+                <div class="content">The Creator of C Programming language</div>
+            </div>
+        </div>
+    </body>
+</html>

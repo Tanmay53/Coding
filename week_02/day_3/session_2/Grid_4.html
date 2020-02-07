@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid 4</title>
+        <style>
+            #box {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap:16px;
+                height:300px;
+                width:400px;
+            }
+            #box > div {
+                background-color: #009688;
+                border-radius: 5px;
+            }
+            .long {
+                grid-column-end: span 2;
+            }
+            @media (orientation:portrait) {
+                #box {
+                    grid-template-columns: 50% 50%;
+                    width: 95%;
+                    height: 700px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div></div>
+            <div class="long"></div>
+            <div></div>
+            <div class="long"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="long"></div>
+        </div>
+    </body>
+</html>
