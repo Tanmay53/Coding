@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Layout 1</title>
+        <style>
+            #layout > :nth-child(1){
+                background-color:#f1e83b;
+                width: 97%;
+                margin: 0.5% 0.5%;
+                padding: 21px;
+                font-size: 31px;
+            }
+            #cols {
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                height: 500px;
+            }
+            #cols > div {
+                flex-basis: 45%;
+                margin: 21px;
+                font-size: 21px;
+                padding: 31px;
+            }
+            #cols > :nth-child(1) {
+                background-color:#f73f37;
+            }
+            #cols > :nth-child(2) {
+                background-color:#6be32e;
+            }
+            @media only screen and (max-device-width: 600px) {
+                #layout > :nth-child(1) {
+                    width: 100%;
+                    margin: 0%;
+                    font-size: 81px;
+                }
+                #cols {
+                    flex-direction: column;
+                    height: 1000px;
+                }
+                #cols > div {
+                    font-size: 51px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="layout">
+            <div>Navigation</div>
+            <div id="cols">
+                <div>Left Box</div>
+                <div>Right Box</div>
+            </div>
+        </div>
+    </body>
+</html>

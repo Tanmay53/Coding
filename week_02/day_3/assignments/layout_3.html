@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Layout 3</title>
+        <style>
+            #nav {
+                width: 95%;
+                background-color: #f1e83b;
+                font-size: 36px;
+                padding: 21px;
+                height: 51px;
+            }
+            #content, #aside {
+                display: flex;
+                height: 600px;
+                justify-content: space-around;
+                font-size: 31px;
+            }
+            #content > :nth-child(1), #aside > div {
+                padding: 21px;
+            }
+            #article {
+                background-color: #f73f37;
+            }
+            #aside > div {
+                background-color: #6be32e;
+                flex-basis: 34%;
+            }
+            @media only screen and (max-device-width: 600px) {
+                #content, #aside {
+                    flex-direction: column;
+                    width: 100%;
+                }
+                #content > div, #aside > div {
+                    margin: 11px 0px;
+                }
+                #nav {
+                    height: 100px;
+                }
+                #content {
+                    height: 800px;
+                }
+                #content > :nth-child(1) {
+                    flex-basis: 30%;
+                }
+            }
+            @media only screen and (min-device-width: 600px) {
+                #content {
+                    flex-direction: column;
+                }
+                #aside {
+                    flex-direction: row;
+                }
+                #content > :nth-child(1) {
+                    width: 95%;
+                    margin: 21px 0px;
+                    flex-basis: 120%;
+                }
+                #aside > div {
+                    margin: 0px 21px;
+                }
+            }
+            @media only screen and (min-device-width: 900px) {
+                #content {
+                    flex-direction: row;
+                }
+                #aside {
+                    flex-direction: column;
+                }
+                #content > :nth-child(1) {
+                    flex-basis: 70%;
+                }
+                #aside {
+                    flex-basis: 30%;
+                    justify-content: flex-start;
+                }
+                #aside > div {
+                    margin: 21px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="nav">Navagitaion</div>
+            <div id="content">
+                <div id="article">Left Box</div>
+                <div id="aside">
+                    <div>Right Box 1</div>
+                    <div>Right Box 2</div>
+                    <div>Right Box 3</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Layout 4</title>
+        <style>
+            nav {
+                width: 96%;
+                height :50px;
+                background-color:#f1e83b;
+                padding: 2%;
+                font-size: 41px;
+            }
+            article {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            article > div {
+                margin: 1%;
+                padding: 1%;
+                font-size: 31px;
+            }
+            article > :nth-child(1) {
+                background-color: #f73f37;
+            }
+            article > :nth-child(2) {
+                background-color: #6be32e;
+            }
+            article > :nth-child(3) {
+                background-color: #5b74ee;
+            }
+            article > :nth-child(4) {
+                background-color: #989898;
+            }
+            @media only screen and (max-device-width: 600px) {
+                nav {
+                    height: 100px;
+                    font-size: 81px;
+                }
+                article {
+                    height: 1200px;
+                }
+                article > div {
+                    flex-basis: 98%;
+                    font-size: 51px;
+                }
+            }
+            @media only screen and (min-device-width: 600px) {
+                article {
+                    height: 500px;
+                }
+                article > div {
+                    flex-basis: 46%;
+                }
+            }
+            @media only screen and (min-device-width: 900px) {
+                article {
+                    height: 300px;
+                }
+                article > div {
+                    flex-basis: 21%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <nav> Navigation </nav>
+            <article>
+                <div>Box 1</div>
+                <div>Box 2</div>
+                <div>Box 3</div>
+                <div>Box 4</div>
+            </article>
+        </div>
+    </body>
+</html>

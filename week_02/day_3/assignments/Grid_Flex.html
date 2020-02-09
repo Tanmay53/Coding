@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid and Flex</title>
+        <style>
+        #pTable {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:flex-end;
+        }
+        #pTable > div {
+            display: grid;
+            grid-template-columns: auto;
+        }
+        #pTable > div > div {
+            height: 46px;
+            width: 46px;
+            border: #000 solid 2px;
+            margin: 5px;
+        }
+        #pTable > :nth-child(4) {
+            grid-template-columns: auto auto auto auto auto auto auto auto auto;
+        }
+        #pTable #hydrogen {
+            background-color: #ab2823;
+        }
+        #pTable > :nth-child(1) > div {
+            background-color: #899f2b;
+        }
+        #pTable > :nth-child(2) > div {
+            background-color: #f85354;
+        }
+        #pTable > :nth-child(3) > div {
+            background-color: #000000;
+        }
+        #pTable > :nth-child(4) > div {
+            background-color: #3979fa;
+        }
+        .purple {
+            background-color: #ac4986;
+        }
+        .orange {
+            background-color: #fa6838;
+        }
+        .green {
+            background-color: #5aa02c;
+        }
+        #pTable > :nth-child(9) > div {
+            background-color: #f64965;
+        }
+        #pTable > :nth-child(10) > div {
+            background-color: #fecd3d;
+        }
+        #pTable > .greyEnd > :last-child {
+            background-color: #6d535f;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="pTable">
+            <div>
+                <div id="hydrogen"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div class="purple"></div>
+                <div class="orange"></div>
+                <div class="orange"></div>
+                <div class="orange"></div>
+                <div class="orange"></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div class="green"></div>
+                <div class="purple"></div>
+                <div class="purple"></div>
+                <div class="orange"></div>
+                <div class="orange"></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="purple"></div>
+                <div class="purple"></div>
+                <div class="orange"></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="purple"></div>
+                <div class="purple"></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="greyEnd">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>
