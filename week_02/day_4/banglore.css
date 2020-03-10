@@ -1,0 +1,39 @@
+* {
+    font-family: Nunito, sans-serif;
+    font-size: 1em;
+}
+.content {
+    padding: 4rem 4rem;
+}
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #666666;
+    height: 4em;
+    align-items: center;
+    box-shadow: #999999 0px 2px 3px 0px;
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: #ffffff;
+}
+#icon {
+    background: url(images/masaiImage.png) center center;
+    background-size: cover;
+    height: 100%;
+    flex-basis: 200px;
+}
+.emptyFlex {
+    flex-grow: 0.8;
+}
+#apply {
+    color: #ffffff;
+    background-color: #dc3545;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+#intro {
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
