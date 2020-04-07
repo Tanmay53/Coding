@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+        <script type="text/javascript">
+            function removeAll(tagName = "", parent = document.body) {
+                var elements = parent.getElementsByTagName(tagName);
+
+                for(var index = (elements.length - 1); index >= 0; index--) {
+                    parent.removeChild(elements[0]);
+                }
+            }
+            function removeAllByClass(className = "", parent = document.body) {
+                var elements = document.getElementsByClassName(className);
+
+                for(var index = (elements.length - 1); index >= 0; index--) {
+                    parent.removeChild(elements[0]);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="document.body.removeChild(document.getElementsByTagName('h1')[0]);">Remove H1</button>
+        <button onclick="removeAll('h3');">Remove H3</button>
+        <button onclick="removeAll('h5', document.getElementById('headings'));">Remove H5</button>
+        <button onclick="removeAllByClass('red', document.getElementById('cont'));">Remove Red</button>
+        <button onclick="removeAll('div', document.getElementById('cont'));">Remove DIVS</button>
+        <script>
+        </script>
+    </body>
+</html>">Remove H5</button>
+<button>Remove Red</button>

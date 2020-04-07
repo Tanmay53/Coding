@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+        <script type="text/javascript">
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+            function insertElement(tagName = "", data = "", parentID = "") {
+                var element = document.createElement(tagName);
+                element.innerHTML = data;
+                document.getElementById(parentID).appendChild(element);
+            }
+
+            function insertElementBefore(sibblingID = "", tagName = "", data = "") {
+                var element = document.createElement(tagName);
+                element.innerHTML = data;
+                
+                document.body.insertBefore(element, document.getElementById(sibblingID));
+            }
+            function addTwoH3() {
+                insertElement('h3', 'A Transformation in education!', "headings");
+                insertElement('h3', 'Learn to earn, pay when you get.', "headings");
+            }
+
+            function create10Divs() {
+                for(var count = 1; count <= 10; count++) {
+                    insertElement("div", ("Content " + count), "cont");
+                }
+            }
+
+            function addStudents() {
+                for(var index = 0; index < students.length; index++) {
+                    insertElement("li", students[index], "vikings");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li id="priyanshu">Priyanshu</li>
+        </ul>
+        <button id="cH1" onclick="insertElement('h1', 'MASAI', 'headings');">Create H1</button>
+        <button onclick="addTwoH3();">Create 2 H3</button>
+        <button onclick="create10Divs();">Create DIVS</button>
+        <button onclick="addStudents();">Add Students</button>
+        <button onclick="insertElementBefore('cH1', 'p', '@ masai 2019');">Add Copyright</button>
+        <script>
+            
+        </script>
+    </body>
+</html>
