@@ -1,0 +1,83 @@
+* {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+#board {
+    width: 300px;
+    margin: 100px auto;
+}
+
+#minScore {
+    background-color: #f73f37;
+}
+
+#maxScore {
+    background-color: #4fab15;
+}
+
+.green {
+    background-color: #658215;
+}
+
+.orange {
+    background-color: #fa6838;
+}
+
+
+
+.normalBorder {
+    border: 1px solid #000000;
+}
+
+#scoreBoard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+
+#scoreBoard > * {
+    flex-basis: 90px;    
+}
+
+#scoreBoard > * > :first-child {
+    height: 30px;
+    padding: 20px;
+}
+
+#scoreEntry {
+    width: 200px;
+    margin: 30px auto;
+}
+
+#currentScore {
+    height: 30px;
+    padding: 20px 0px;
+    background-color: #b3b3b3;
+}
+
+#scoreButtons {
+    width: 250px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+#scoreButtons > * {
+    padding: 10px;
+}
+
+#zero {
+    grid-area: 4/2/5/3;
+    color: #fff;
+    background-color: #843666;
+}
+
+#enter {
+    grid-area: 5/1/6/span 3;
+    color: #fff;
+    background-color: #000000;
+}

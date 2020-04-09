@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Registration </title>
+        <script type="text/javascript" src="registration.js"></script>
+        <link type="text/css" rel="stylesheet" href="registration.css" />
+    </head>
+    <body>
+        <div id="mainArea">
+            <div id="inputBox">
+                <div id="nameBox">
+                    <div>NAME</div>
+                    <input type="text" id="name" />
+                    <br />
+                    <div class="message noDisplay"></div>
+                </div>
+                <div id="emailBox">
+                    <div>EMAIL</div>
+                    <input type="email" id="mail" />
+                    <br />
+                    <div class="message noDisplay"></div>
+                </div>
+                <div id="mobileBox">
+                    <div>MOBILE</div>
+                    <input type="number" id="mobile" />
+                    <br />
+                    <div class="message noDisplay"></div>
+mo                <button id="register" onclick="displayResults();" on>REGISTER</button>
+            </div>
+            <div id="outputBox">
+                <div class="title noDisplay">Name</div>
+                <div id="nameDisplay"></div>
+                <div class="title noDisplay">EMAIL</div>
+                <div id="mailDisplay"></div>
+                <div class="title noDisplay">MOBILE</div>
+                <div id="mobileDisplay"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Add To Gallery</title>
+        <script type="text/javascript" src="products.js"></script>
+        <link type="text/css" rel="stylesheet" href="products.css" />
+    </head>
+    <body>
+        <div id="mainBoard">
+            <div id="inputElements">
+                <div id="nameBox">
+                    <div>NAME</div>
+                    <input type="text" id="name">
+                    <br />
+                </div>
+                <div id="urlBox">
+                    <div>IMAGE <label for="url" id="imageLabel">Select Image</label></div>
+                    <input type="file" id="url" accept="image/*" style="display: none;" onchange="loadImage(event)">
+                    <br />
+                    <img id="imagePreview" src="temp.txt" />
+                    <br />
+                </div>
+                <div id="priceBox">
+                    <div>Price</div>
+                    Rs. <select id="price">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                    </select>
+                </div>
+
+                <button id="submit" onclick="addToCart()">Add To Cart</button>
+            </div>
+            <div id="cartBoard">
+                <div id="cartHeading">CART</div>
+                <div id="cart">
+                </div>
+            </div>
+        </div>
+        <div id="hiddenBox" style="display: none;">
+            <div id="sampleProduct" class="product">
+                <picture>
+                    <img class="urlData" src="" alt="imageName">
+                </picture>
+                <div class="nameData">2imageName2</div>
+                <div class="edit" onclick="editProduct(this);">EDIT</div>
+                <div class="rateData">Rs. <span class="rateValue"></span></div>
+                <div class="delete" onclick="deleteConfirm(this);">DELETE</div>
+            </div>
+        </div>
+    </body> 
+</html>

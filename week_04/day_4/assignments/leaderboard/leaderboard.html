@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Leader Board</title>
+        <script type="text/javascript" src="leaderboard.js"></script>
+        <link type="text/css" rel="stylesheet" href="leaderboard.css" />
+    </head>
+    <body>
+        <div id="board">
+            <div id="scoreBoard">
+                <div id="mininmum">
+                    <div class="normalBorder" id="minScore"></div>
+                    <div>MIN</div>
+                </div>
+                <div id="maximum">
+                    <div class="normalBorder" id="maxScore"></div>
+                    <div>MAX</div>
+                </div>
+            </div>
+
+            <div id="scoreEntry">
+                <div>SCORE</div>
+                <div class="normalBorder" id="currentScore"></div>
+            </div>
+
+            <div id="scoreButtons">
+                <div class="normalBorder green" onclick="enterScore(1);">1</div>
+                <div class="normalBorder orange" onclick="enterScore(2);">2</div>
+                <div class="normalBorder green" onclick="enterScore(3);">3</div>
+                <div class="normalBorder orange" onclick="enterScore(4);">4</div>
+                <div class="normalBorder orange" onclick="enterScore(5);">5</div>
+                <div class="normalBorder orange" onclick="enterScore(6);">6</div>
+                <div class="normalBorder green" onclick="enterScore(7);">7</div>
+                <div class="normalBorder orange" onclick="enterScore(8);">8</div>
+                <div class="normalBorder green" onclick="enterScore(9);">9</div>
+                <div class="normalBorder" id="zero" onclick="enterScore(0);">0</div>
+                <div class="normalBorder" id="enter" onclick="checkScore();">Enter</div>
+            </div>
+        </div>
+    </body>
+</html>
