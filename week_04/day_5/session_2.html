@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Session 2</title>
+        <style>
+            #box {
+                height: 200px;
+                width: 300px;
+                background-color: #4c9bd9;
+                border-radius: 10px;
+            }
+            #submit {
+                font-size: 1em;
+                background-color: #b1473a;
+                border-radius: 10px;
+                margin: 50% 0% 0% 70%;
+                border: none;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div id="box">
+            <button id="submit">SUBMIT</button>
+        </div>
+    </body>
+    <script type="text/javascript">
+        window.addEventListener("resize",  function() {
+            document.body.style.backgroundColor = randomColor();
+        });
+
+        document.getElementById("box").addEventListener("mouseenter", function() {
+            this.children[0].style.backgroundColor = "#ffff00";
+        });
+
+        document.getElementById("box").addEventListener("mouseleave", function() {
+            this.children[0].style.backgroundColor = "#b1473a";
+        })
+
+        function randomNumber(limit = 0) {
+            var number = Math.floor(Math.random() * (limit + 1));
+            return number;
+        }
+
+        function randomColor() {
+            var color = "rgb(" + randomNumber(255) + ", " + randomNumber(255) + ", " + randomNumber(255) + ")";
+            return color;
+        }
+    </script>
+</html>

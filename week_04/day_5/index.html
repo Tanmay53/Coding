@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Week 4 Day 5 Coding 1</title>
+    </head>
+  <body>
+    <!-- FSD.JS.10.1 !-->
+    <h1>Change the buttons text color random value</h1>
+    <button id="colorButton">Click here to change my color</button>
+
+    <button id="colorArray">Click me to change my color to an array value!</button>
+
+    <!-- FSD.JS.10.2 !-->
+    <h1 id="coloredH1">My color should change when I double click the button!</h1>
+    <button id="colorOnDbl">Double Click here to change the color of the h1 tag !</button>
+
+    <!-- FSD.JS.10.3 !-->
+    <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+    <button id="bgButton">Click here to change my color!</button>
+    <script>
+      document.getElementById("colorButton").addEventListener("click", function() {
+        this.style.color = createRandomColor();
+      });
+
+      document.getElementById("colorOnDbl").addEventListener("dblclick", function() {
+        document.getElementById("coloredH1").style.color = createRandomColor();
+      });
+
+      var changeCount = 0;
+      document.getElementById("bgButton").addEventListener("click", function() {
+        if(changeCount < 2) {
+          this.style.backgroundColor = createRandomColor();
+          changeCount++;
+        }
+        else {
+          this.removeEventListener("click", this);
+        }
+      });
+
+      var colors = ["red", "green", "blue", "black", "white", "brown", "grey", "orange", "violet"];
+      var colorIndex = 0;
+
+      document.getElementById("colorArray").addEventListener("click", function() {
+        if(colorIndex == colors.length) {
+          colorIndex = 0;
+        }
+
+        this.style.backgroundColor = colors[colorIndex++];
+      });
+
+      document.getElementById("bgButton").addEventListener("mouseover", function() {
+        this.style.fontSize = randomNumber(20) + "px";
+      })
+
+      function createRandomColor() {
+        var color = "rgb(" + randomNumber(255) + ", " + randomNumber(255) + ", " + randomNumber(255) + ")";
+        return color;
+      }
+
+      function randomNumber(limit) {
+        var number = Math.floor(Math.random() * (limit + 1));
+        return number;
+      }
+    </script>
+  </body>
+</html>
