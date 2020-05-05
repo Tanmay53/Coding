@@ -1,0 +1,168 @@
+html, body {
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  font-size: 1em;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header {
+  font-size: 2em;
+  height: 2em;
+  text-align: center;
+  padding: 0.4em 0em;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, rgba(0, 180, 180, 1), rgba(0, 0, 0, 0));
+}
+
+#backgroundImage {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url(resources/sincerely-media-BfriYg0iOCs-unsplash.jpg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+#marksEntry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-around;
+}
+
+label {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #f1ff00;
+}
+
+label:after {
+  content: " : ";
+}
+
+#marksEntry > label{
+  flex-basis: 70%;
+  text-align: left;
+}
+
+#marksEntry > label[for=name], h3, h4{
+  flex-basis: 100%;
+  text-align: center;
+}
+
+#marksEntry > label[for=grade] {
+  flex-basis: 40%;
+}
+
+#marksEntry > input {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  border: 2px solid #999999;
+  border-radius: 0.3em;
+  padding: 0.1em;
+  width: 3em;
+}
+
+#marksEntry > input[id=name] {
+  width: 14em;
+  align-self: center;
+}
+
+h3, h4 {
+  font-size: 1.7em;
+  font-weight: 100;
+}
+
+select {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.7em;
+  font-size: 1.2em;
+  padding: 0.2em;
+}
+
+.icon {
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #fff;
+  border-radius: 0.3em;
+  padding: 0.2em;
+  vertical-align: middle;
+}
+
+hr {
+  width: 85%;
+  height: 0.2em;
+  background-color: #000;
+  border: #000;
+}
+
+input[type=submit], button{
+  font-size: 1.8em;
+  font-weight: 700;
+  padding: 0.2em;
+  border: 1px solid #999999;
+  border-radius: 0.4em;
+  color: #1e5300;
+  background-color: rgba(230, 230, 250, 0.6);
+  margin-bottom: 1em;
+}
+
+input[type=submit]:hover, button:hover {
+  background-color: rgba(230, 230, 250, 0.9);
+}
+
+.studentTable {
+  display: none;
+  grid-template-columns: 9em 6em 6em 6em 6em 6em 6em;
+  overflow: scroll;
+}
+
+.header {
+  font-size: 1.3em;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  background-color: #ffb5b577;
+}
+
+#tableContainer {
+  margin-bottom: 2em;
+}
+
+.studentTable > div {
+  overflow: hidden;
+  padding: 0.2em;
+}
+
+.studentTable > :nth-child(n + 8) {
+  border: 2px solid #000;
+  background-color: #bcffba77;
+}
+
+@media screen and (max-device-width: 900px) {
+  
+}
+
+@media screen and (max-device-width: 600px) {
+  
+}
+
+@media screen and (min-device-width: 750px) {
+  #gradeBox {
+    display: inline;
+  }
+  
+  .studentTable {
+    justify-content: center;
+    align-items: center;
+  }
+}

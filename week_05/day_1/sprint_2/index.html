@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="backgroundImage"></div>
+    <header>Student Data</header>
+    <article>
+      <h3> Enter Student Data</h3>
+      <label for="name"> Name</label>
+      <input type="text" maxlength="20" minlength="1" vlaue="" id="name" required/>
+      <div id="gradeBox">
+        <label for="grade"> Grade</label>
+        <select id="grade" required></select>
+      </div>
+      <br />
+      <div id="marksEntry">
+        <h4>Enter Marks</h4>
+        <label for="science">
+          <img class="icon" src="resources/noun_Science_2345213.svg" alt="science"><span>Science</span>
+        </label>
+        <input type="number" id="science" max="100" min="0" value="0" required>
+        <label for="maths">
+          <img class="icon" src="resources/noun_Math_1929549.svg" alt="mathematics"><span>Mathematics</span>
+        </label>
+        <input type="number" id="maths" max="100" min="0" value="0" required>
+        <label for="english">
+          <img class="icon" src="resources/noun_english_902379.svg" alt="english"><span>English</span>
+        </label>
+        <input type="number" id="english" max="100" min="0" value="0" required>
+        <label for="history">
+          <img class="icon" src="resources/noun_History_1612790.svg" alt="history"><span>History</span>
+        </label>
+        <input type="number" id="history" max="100" min="0" value="0" required>
+        <label for="geography">
+          <img class="icon" src="resources/noun_Geography_2908612.svg" alt="geography"><span>Geography</span>
+        </label>
+        <input type="number" id="geography" max="100" min="0" value="0" required>
+      </div>
+      <input type="submit" id="create" value=" Save Data ">
+
+      <hr />
+
+      <h3> Get Students Data </h3>
+      <label for="getGrade"> Select Grade </label>
+      <select id="getGrade">
+      </select>
+      <button id="displayButton"> Get Student Table </button>
+      <div id="tableContainer">
+      </div>
+    </article>
+  </body>
+</html>
