@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", function() {
+                document.getElementById("cH1").addEventListener("click", function() {
+                    var firstH1 = document.getElementsByTagName("h1")[0];
+                    addClassByGroup([firstH1], "class-h1");
+                });
+
+                document.getElementById("cH3").addEventListener("click", function() {
+                    var tags = document.getElementsByTagName("h3");
+                    addClassByGroup(tags, "class-h3");
+                });
+
+                document.getElementById("cH5").addEventListener("click", function() {
+                    var tags = document.getElementsByTagName("h5");
+                    addClassByGroup(tags, "class-h5");
+                });
+
+                document.getElementById("cDIV").addEventListener("click", function() {
+                    var divs = document.getElementById("box").getElementsByTagName("div");
+                    addClassByGroup(divs, "class-div");
+                });
+
+                document.getElementById("cP").addEventListener("click", function() {
+                    var ptags = document.getElementById("cont").getElementsByTagName("p");
+                    addClassByGroup(ptags, "class-p");
+                });
+
+                document.getElementById("sID").addEventListener("click", function() {
+                    document.getElementById("temp").getElementsByTagName("p")[1].id = "test-2";
+                })
+            });
+
+            function addClassByGroup(groupArray = [], newClass = "") {
+                for(var index = 0; index < groupArray.length; index++) {
+                    groupArray[index].classList.add(newClass);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button id="cH1">Change H1</button>
+        <button id="cH3">Change H3</button>
+        <button id="cH5">Change H5</button>
+        <button id="cDIV">Change DIV</button>
+        <button id="cP">Change P</button>
+        <button id="sID">Set ID</button>
+        <script>         
+        </script>
+    </body>
+</html>

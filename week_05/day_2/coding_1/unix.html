@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: sans-serif;
+            }
+            #linus {
+                height: 300px;
+                width: 500px;
+                background-color: #e3dbdb;
+                text-align: center;
+                display: inline-block;
+                padding: 20px;
+            }
+            #linux img {
+                height: 200px;
+                width: 150px;
+            }
+            #name {
+                color: #37248f;
+                font-size: 3em;
+                font-weight: bold;
+            }
+            #work {
+                font-size: 2em;
+            }
+            #khan {
+                max-height: 300px;
+                width: 900px;
+                text-align: left;
+                display: inline-block;
+                padding: 20px;
+            }
+            #khan img {
+                float: left;
+            }
+            #khan span {
+                padding: 20px;
+            }
+            #name1 {
+                color: #b02d29;
+                font-size: 2.5em;
+                font-weight: bolder;
+            }
+            #work1 {
+                font-size: 1.5em;
+            }
+            table {
+                display: inline-table;
+                height: 180px;
+                width: 1100px;
+                background-color: #d2572e;
+                padding: 20px;
+                border-spacing: 0px;
+            }
+            #name2, #name3 {
+                color: #ffffff;
+                font-size: 2em;
+                line-height: 100px;
+            }
+            #name2, #work2 {
+                text-align: left;
+            }
+            #name3, #work3 {
+                text-align: right;
+            }
+            #work2, #work3 {
+                font-size: 1.3em;
+            }
+            table td {
+                width: 50%;
+            }
+            table tr td:nth-child(1) {
+                border-right-style: solid;
+                border-right-width: 4px;
+            }
+            table tr td:nth-child(2) {
+                border-left-style: solid;
+                border-left-width: 4px;
+            }
+        </style>
+
+        <script>
+            window.addEventListener("load", function() {
+                document.getElementById("creator").addEventListener("click", function() {
+                    this.style.display = "none";
+
+                    var body = document.querySelector("body");
+
+                    var linux = pushElementTo(body, "div", "", {"id": "linus"});
+
+                    pushElementTo(linux, "img", "", {"src": "linus.jpg", "height": 200, "width": 150, "alt": "Linus Torvlads"});
+                    createBR(linux);
+                    pushElementTo(linux, "span", "Linus Torvlads", {"id": "name"});
+                    createBR(linux);
+                    pushElementTo(linux, "span", "The Creator of Linux and Git", {"id": "work"});
+
+                    for(var a = 1; a <= 3; a++) { createBR(body) }
+
+                    var khan = pushElementTo(body, "div", "", {"id": "khan"});
+
+                    pushElementTo(khan, "img", "", {"src": "khan.jpg", "height": 175, "width": 125, "alt": "Salman Khan"});
+                    pushElementTo(khan, "span", "Sal Khan", {"id": "name1"});
+                    for(var a = 1; a <= 3; a++) { createBR(khan); }
+                    pushElementTo(khan, "span", "Salman Khan is the founder of the khan academy which has a mission of providing a free world-class education for anyone, anywhere.", {"id": "work1"});
+
+                    createBR(body);
+
+                    var table = pushElementTo(body, "table", "");
+                    var tr1 = pushElementTo(table, "tr", "");
+                    var td1 = pushElementTo(tr1, "td", "");
+
+                    pushElementTo(td1, "div", "Ken Thompson", {"id": "name2"});
+                    pushElementTo(td1, "div", "Designed and Implemented the original Unix Operating System", {"id": "work2"});
+
+                    var td2 = pushElementTo(tr1, "td", "");
+
+                    pushElementTo(td2, "div", "Dennis Ritchie", {"id": "name3"});
+                    pushElementTo(td2, "div", "The Creator of C Programming Language", {"id": "work3"});
+                });
+            });
+
+            function createBR(parent) {
+                var newBR = document.createElement("br");
+                parent.appendChild(newBR);
+            }
+
+            function pushElementTo(parent, tagName = "", data = "", attributes = {}) {
+                var newElement = document.createElement(tagName);
+
+                newElement.innerHTML = data;
+
+                for(var key in attributes) {
+                    newElement[key] = attributes[key];
+                }
+
+                parent.appendChild(newElement);
+
+                return newElement;
+            }
+        </script>
+    </head>
+    <body>
+       <button id="creator">Create Page</button>
+    </body>
+</html>
