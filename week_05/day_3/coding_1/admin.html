@@ -6,7 +6,7 @@
     <script>
       var adminPass = JSON.parse(localStorage.getItem("adminAllow"));
 
-      if(adminPass != null) {
+      if(adminPass[0] === true) {
         localStorage.removeItem("adminAllow");
 
         var userList = JSON.parse(localStorage.getItem("users"));
@@ -48,7 +48,7 @@
           }
 
           var infoButtons = document.getElementsByClassName("infoButton");
-          console.log(infoButtons);
+          
           for(var index = 0; index < infoButtons.length; index++) {
             infoButtons[index].addEventListener("click", function() {
               var userName = this.parentElement.parentElement.querySelector("td").innerText;

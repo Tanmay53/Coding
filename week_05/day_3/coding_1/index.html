@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0" />
     <script>
+      /*
+        Use the following code in the console for initializing the admin account.
+
+        var users = { "adminName": {"pwd": "password", "active": false, "logInCount": 0, "logInTimeList": [], "admin": true}};
+
+        localStorage.setItem("users", JSON.stringify(users));
+      */
+
       window.addEventListener("load", function() {
         document.getElementById("logIn").addEventListener("click", function() {
           printMessage("");
