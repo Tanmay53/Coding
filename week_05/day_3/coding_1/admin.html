@@ -84,13 +84,15 @@
         });
 
         function terminateLogIn() {
-          var userList = JSON.parse(localStorage.getItem("users"));
-          userList[adminPass[1]].active = false;
-          localStorage.setItem("users", JSON.stringify(userList));
-
-          var activeUsers = JSON.parse(localStorage.getItem("activeList"));
-          delete activeUsers[adminPass[1]];
-          localStorage.setItem("activeList", JSON.stringify(activeUsers));
+          accessLocalStorage("users", function(userList) {
+            userList[adminPass[1]].active = false;
+            return userList;
+          });
+          
+          accessLocalStorage("activeList", function(activeUsers) {
+            delete activeUsers[adminPass[1]];
+            return activeUsers;
+          });
           
           localStorage.removeItem(adminPass[1] + "Time");
 
@@ -117,6 +119,12 @@
 
       function assignDataTo(elementId = "", data = "") {
         document.getElementById(elementId).innerHTML = data;
+      }
+
+      function accessLocalStorage(itemName = "", callBack) {
+        var itemValue = JSON.parse(localStorage.getItem(itemName));
+        var itemValue = callBack(itemValue);
+        localStorage.setItem(itemName, JSON.stringify(itemValue));
       }
     </script>
   </head>

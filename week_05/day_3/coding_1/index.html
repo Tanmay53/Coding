@@ -28,7 +28,7 @@
                 printMessage("You have Successfuly Logged In.");
                 localStorage.setItem("newUser", userName);
 
-                var activeUsers = JSON.parse(localStorage.getItem("activeList"));
+                /*var activeUsers = JSON.parse(localStorage.getItem("activeList"));
                 var dateTime = new Date();
 
                 if(activeUsers == null) {
@@ -41,7 +41,23 @@
                   seconds: dateTime.getSeconds()
                 }};
 
-                localStorage.setItem("activeList", JSON.stringify(activeUsers));
+                localStorage.setItem("activeList", JSON.stringify(activeUsers));*/
+
+                accessLocalStorage("activeList", function(activeUsers) {
+                  var dateTime = new Date();
+
+                  if(activeUsers == null) {
+                    activeUsers = {};
+                  }
+
+                  activeUsers[userName] = {IN_Time: {
+                    hours: dateTime.getHours(),
+                    minutes: dateTime.getMinutes(),
+                    seconds: dateTime.getSeconds()
+                  }};
+
+                  return activeUsers;
+                });
 
                 window.location.href = "./dash.html";
               }
@@ -61,26 +77,28 @@
           if(checkValidity()) {
             var userName = document.getElementById("name").value;
             var password = document.getElementById("password").value;
-            var userData = JSON.parse(localStorage.getItem("users"));
 
-            if(userData == undefined) {
-              userData = {};
-            }
+            accessLocalStorage("users", function(userData) {
+              if(userData == undefined) {
+                userData = {};
+              }
 
-            if(userData[userName] == undefined) {
-              userData[userName] = {};
-              userData[userName].pwd = password;
-              userData[userName].active = false;
-              userData[userName].logInCount = 0;
-              userData[userName].logInTimeList = [];
-              localStorage.setItem("users", JSON.stringify(userData));
+              if(userData[userName] == undefined) {
+                userData[userName] = {};
+                userData[userName].pwd = password;
+                userData[userName].active = false;
+                userData[userName].logInCount = 0;
+                userData[userName].logInTimeList = [];
 
-              clearInputsById(["name", "password"]);
-              printMessage("You New LogIn Id has been created.");
-            }
-            else {
-              printMessage("The User Name is not Valid.", true);
-            }
+                clearInputsById(["name", "password"]);
+                printMessage("You New LogIn Id has been created.");
+              }
+              else {
+                printMessage("The User Name is not Valid.", true);
+              }
+
+              return userData;
+            });
           }
         });
       });
@@ -120,6 +138,12 @@
         for(var index = 0; index < elementIds.length; index++) {
           document.getElementById(elementIds[index]).value = "";
         }
+      }
+
+      function accessLocalStorage(itemName = "", callBack) {
+        var itemValue = JSON.parse(localStorage.getItem(itemName));
+        var itemValue = callBack(itemValue);
+        localStorage.setItem(itemName, JSON.stringify(itemValue));
       }
     </script>
   </head>
